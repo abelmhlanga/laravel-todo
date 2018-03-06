@@ -18,7 +18,8 @@ class CreateTodosTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('tasks');
             $table->boolean('done');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
            
         });
     }
